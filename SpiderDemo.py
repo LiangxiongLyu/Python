@@ -11,13 +11,15 @@ try:
     request = urllib2.Request(url,headers=headers)
     response = urllib2.urlopen(request)
     content = response.read().decode('utf-8')
-    pattern = re.compile('<a.*?'+'<div.*?"content".*?'+'<span>(.*?)</span>.*?'+
+    pattern = re.compile('<div.*?"author clearfix".*?'+'<h2>(.*?)</h2>.*?'+
+			 '<a.*?'+'<div.*?"content".*?'+'<span>(.*?)</span>.*?'+
                          '<div.*?"stats".*?'+'<span.*?"stats-vote".*?'+
                          '<i.*?>(.*?)</i>'
                          ,re.S)
-    items = re.findall(pattern,content)
+    items=re.findall(pattern,content)
     for item in items:
-        print item[0],item[1]
+        print item[0]
+	print item[1],'\n',item[2],'\n'
 except urllib2.URLError, e:
     if hasattr(e,"code"):
         print e.code
