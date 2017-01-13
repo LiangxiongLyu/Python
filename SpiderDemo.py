@@ -17,9 +17,14 @@ try:
                          '<i.*?>(.*?)</i>'
                          ,re.S)
     items=re.findall(pattern,content)
+    removeBr=re.compile('<br/>')
     for item in items:
-        print item[0]
-	print item[1],'\n',item[2],'\n'
+        print '___________________________________________________________________________________________'
+        print item[0],':'
+        print re.sub(removeBr,'\n    ','    '+item[1])
+        print item[2]
+        
+
 except urllib2.URLError, e:
     if hasattr(e,"code"):
         print e.code
