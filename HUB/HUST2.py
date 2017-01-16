@@ -6,11 +6,8 @@ import re
 
 class HUB:
     def __init__(self):
-        #声明一个CookieJar对象实例来保存cookie
         self.cookies = cookielib.CookieJar()
-        #利用urllib2库的HTTPCookieProcessor对象来创建cookie处理器
         self.handler=urllib2.HTTPCookieProcessor(self.cookies)
-        #通过handler来构建opener
         self.opener = urllib2.build_opener(self.handler)
         self.url1='https://pass.hust.edu.cn/cas/login?service=http%3A%2F%2Fhubs.hust.edu.cn%2Fhustpass.action'
         self.url2='https://pass.hust.edu.cn/cas/login?service=http%3A%2F%2Fhubs.hust.edu.cn%2Fhustpass.action'
@@ -28,27 +25,8 @@ class HUB:
         self.postData3=urllib.urlencode({})
         self.postData4=urllib.urlencode({})
         self.headers1={
-            'Host':'pass.hust.edu.cn',
-            'Connection':'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
-            'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',         
-            'Accept-Encoding':'gzip, deflate, br',
-            'Accept-Language':'zh-CN,zh;q=0.8'
             }
         self.headers2={
-            'Host':'pass.hust.edu.cn',
-            'Connection':'keep-alive',
-            'Content-Length': '603',
-            'Cache-Control':'max-age=0',
-            'Origin':'https://pass.hust.edu.cn',
-            'Upgrade-Insecure-Requests': '1',
-            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
-            'Content-Type':'application/x-www-form-urlencoded',
-            'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Referer':'https://pass.hust.edu.cn/cas/login?service=http%3A%2F%2Fhub.hust.edu.cn%2Fhustpass.action',
-            'Accept-Encoding':'gzip, deflate, br',
-            'Accept-Language':'zh-CN,zh;q=0.8'
             }
         self.headers3={}
         self.headers4={
@@ -67,19 +45,16 @@ class HUB:
         }
 
 
-    #传入url,data,headers,获得responce
     def linkIn(self,url,data='',headers={}):
-        for cookie in self.cookies:
-            print cookie.name,cookie.value
+        #for cookie in self.cookies:
+        #    print cookie.name,cookie.value
         request=urllib2.Request(url,data,headers)
         responce=self.opener.open(request)
         return responce
-    #传入url,data,headers,获得content
     def getContent(self,url,data='',headers={}):
         responce=self.linkIn(url,data,headers)
         content=responce.read().decode('utf-8')
         return content
-    #匹配form参数
     def getInfo(self,content):
         pattern=re.compile('<input.*?name="(.*?)".*?value="(.*?)"')
         result=pattern.findall(content)
@@ -87,20 +62,17 @@ class HUB:
         for item in result:
             Dict[item[0]]=item[1]
         return Dict
-    #主函数
     def start(self):
         
         self.linkIn(self.url1,self.postData1,self.headers1)
+        #self.getContent(self.url1,self.postData1,self.headers1)
         #self.linkIn(self.url2,self.postData2,self.headers2)
-        #print self.getContent(self.url1,self.postData1,self.headers1)
         print self.getContent(self.url2,self.postData2,self.headers2)
 
-        ###中间页面提取表单内容
         #content3=self.getContent(self.url3,self.postData3,self.headers3)
         #self.postData4=urllib.urlencode(self.getInfo(content3))
-        ###最终请求页面
-        ##self.linkIn(self.url4,self.postData4,self.headers4)
-        #print self.getContent(self.url4,self.postData4,self.headers4)
+        #self.linkIn(self.url4,self.postData4,self.headers4)
+        #self.getContent(self.url4,self.postData4,self.headers4)
 
 
 
