@@ -1,0 +1,17 @@
+[ 1 ] J. Y. Baek, J. H. An, J. M. Choi, K. S. Park, S. H. Lee, Sensor Actuat. a-Phys. 2008, 143, 423.
+[ 2 ] H. C. Jung, J. H. Moon, D. H. Baek, J. H. Lee, Y. Y. Choi, J. S. Hong, S. H. Lee, Ieee T. Bio-Med. Eng. 2012, 59, 1472.
+[ 3 ] M. K. Kwak, H. E. Jeong, K. Y. Suh, Adv. Mater. 2011, 23, 3949.
+[ 4 ] C. T. Lin, L. D. Liao , Y. H. Liu , I. J. Wang , B. S. Lin , J. Y. Chang , Ieee T. Bio-Med. Eng. 2011 , 58 , 1200 .
+[ 5 ] A. Searle , L. Kirkup , Physiol. Meas. 2000 , 21 , 271 .
+[ 6 ] G. Ruffi ni , S. Dunne , L. Fuentemilla , C. Grau , E. Farres , J. Marco-Pallares , P. C. P. Watts , S. R. P. Silva , Sensor Actuat. a-Phys. 2008 , 144 , 275 .
+[ 7 ] D. H. Kim , N. S. Lu , R. Ma , Y. S. Kim , R. H. Kim , S. D. Wang , J. Wu , S. M. Won , H. Tao , A. Islam , K. J. Yu , T. I. Kim , R. Chowdhury , M. Ying , L. Xu , M. Li , H. J. Chung , H. Keum , M. McCormick , P. Liu , Y. W. Zhang , F. G. Omenetto , Y. G. Huang , T. Coleman , J. A. Rogers , Science 2011 , 333 , 838 .
+[ 8 ] Y. Takema , Y. Yorimoto , M. Kawai , G. Imokawa , Brit. J. Dermatol. 1994 , 131 , 641 .
+[ 9 ] Y. Barrandon , H. Green , Proc. Natl. Acad. Sci. USA 1985 , 82 , 5390 .
+[ 10 ] L. Tchvialeva , H. Zeng , I. Markhvida , M. D. H. Lui , T. Lee , in Skin Roughness Assessment (New Developments in Biomedical Engineering) , D. Campolo , Ed. (InTech, www.intechopen.com/download/pdf/
+pdfs_id/9090, 2010 .
+[ 11 ] K. P. Wilhelm , P. Elsner , E. Berardesca , Bioengineering of the Skin: Skin Surface Imaging and Analysis. CRC : Boca Raton , 1997 .
+[ 12 ] R. D. Benfi eld , E. R. Newton , T. Hortobagyi , Biol. Res. Nurs. 2007 , 8 , 195 .
+[ 13 ] S. J. Choi , J. H. Lee , Y. H. Lee , D. Y. Hwang , H. D. Kim , J. Appl. Polym. Sci. 2011 , 121 , 3516 .
+[ 14 ] W. M. Silvers , D. G. Dolny , J. Electromyogr. Kinesiol. 2011 , 21 , 95 .
+[ 15 ] Z. Zhang , A. Conway , A. B. Salamone , E. T. Crumpler , X. Zhang , C. Z. Li , Front. Biosci. 2010 , 2 , 1123 .
+[ 16 ] J. Klode , L. Schottler , I. Stoffels , A. Korber , D. Schadendorf , J. Dissemond , J. Eur. Acad. Dermatol. 2011 , 25 , 933 .
